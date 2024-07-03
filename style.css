@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #CCDDEE;
+    
+}
+.envelope{
+    position: relative;
+    cursor: pointer;
+}
+.back{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background-color: #6F7893;
+}
+.front{
+    position: relative;
+    border-right: 130px solid #808EB5;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 120px;
+    z-index: 3;
+}
+.front:before{
+    content: '';
+    position: absolute;
+    border-left: 130px solid #808EB5;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    left: -120px;
+    top: -100px;
+}
+.front:after{
+    content: '';
+    position: absolute;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 105px solid  #7783A8;
+    height: 0;
+    width: 0;
+    left: -120px;
+    top: -5px;
+}
+.top{
+    position: absolute;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-top: 105px solid  #919ab7;
+    height: 0;
+    width: 0;
+    top: 0;
+    transform-origin: top;
+    transition: 2s;
+}
+.envelope:hover .top{
+    transform: rotateX(160deg);
+}
+.letter{
+    position: absolute;
+    background-color: white;
+    width: 235px;
+    height: 190px;
+    top: 10px;
+    left: 10px;
+    transition: 1s;
+}
+.envelope:hover .letter{
+    transform: translateY(-140px);
+    z-index: 2;
+}
+.text1{
+    position: absolute;
+    color: #3d6083;
+    font-family: sans-serif;
+    top: -150px;
+    text-align: center;
+}
+.text{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: -5px;
+    text-transform: capitalize;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    text-decoration: 1px solid wavy;
+    color: black;
+}
+
